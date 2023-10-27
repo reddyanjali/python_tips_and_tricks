@@ -134,4 +134,106 @@ Instead of creating a list, use generator expressions for memory-efficient itera
 even_squares = (x**2 for x in range(10) if x % 2 == 0)
 ```
 
+### 16. Decorators:
+
+Decorators can enhance the functionality of functions. They're often used for tasks like logging, authentication, and memoization.
+
+```
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        # Do something before the function is called
+        result = func(*args, **kwargs)
+        # Do something after the function is called
+        return result
+    return wrapper
+```
+
+### 17. Virtual Environments:
+
+Use virtual environments to isolate project dependencies. This prevents conflicts between different project requirements.
+
+```
+# Creating a virtual environment
+python -m venv myenv
+# Activating the virtual environment
+source myenv/bin/activate (Linux/macOS)
+myenv\Scripts\activate (Windows)
+```
+
+### 18. Try-Except Blocks:
+
+Handle exceptions gracefully with try-except blocks, improving code robustness.
+
+```
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Division by zero is not allowed.")
+```
+
+### 19. Dictionaries with Default Values:
+
+Use collections.defaultdict to create dictionaries with default values. This can simplify code when dealing with missing keys.
+
+```
+from collections import defaultdict
+my_dict = defaultdict(int)
+my_dict['anj']  # Returns 0 if 'anj' doesn't exist in the dictionary
+```
+
+### 20. F-Strings (formatted strings):
+
+Format strings in a more readable way using f-strings, introduced in Python 3.6:
+
+```
+name = "John"
+age = 30
+print(f"My name is {name} and I am {age} years old.")
+```
+
+### 21. *args and **kwargs:
+
+Use *args and **kwargs to accept an arbitrary number of positional or keyword arguments in functions:
+
+```
+def my_function(*args, **kwargs):
+    # args is a tuple of positional arguments
+    # kwargs is a dictionary of keyword arguments
+    pass
+```
+
+### 22. any() and all() functions:
+
+Check if any or all elements in an iterable meet a specific condition:
+
+```
+my_list = [True, False, True, True]
+print(any(my_list))  # Checks if any element is True
+print(all(my_list))  # Checks if all elements are True
+```
+
+### 23. filter() and map() functions:
+
+Use filter() to filter elements from an iterable and map() to apply a function to all elements:
+
+```
+num = [1, 2, 3, 4, 5]
+filtered_numbers = filter(lambda x: x % 2 == 0, num)
+mapped_nums = map(lambda x: x * 2, num)
+```
+
+### 24. collections module:
+
+The `collections` module provides specialized container datatypes, such as `defaultdict`, `Counter`, and `deque`, offering more functionality than built-in data types.
+
+### 25. with Statement for File Handling:
+
+Utilize the with statement for better file handling, ensuring that files are properly closed after usage:
+
+```
+with open('file.txt', 'r') as file:
+    data = file.read()
+# File is automatically closed after exiting the block
+```
+
 ##### Will try to update this file frequently :)
